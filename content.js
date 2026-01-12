@@ -1,6 +1,7 @@
 /* ========================================
    CONTENT LOADER
-   Load all content from data.json
+   Load content from GitHub (primary) with
+   local data.json as fallback
    ======================================== */
 
 class ContentLoader {
@@ -10,13 +11,38 @@ class ContentLoader {
     }
 
     async init() {
+        const REMOTE_URL = 'https://raw.githubusercontent.com/iqballbayhaqi/web-portofolio/main/data.json';
+        const LOCAL_FALLBACK = 'data.json';
+        
         try {
-            const response = await fetch('data.json');
+            // Try fetching from remote GitHub first
+            console.log('🔄 Fetching content from GitHub...');
+            const response = await fetch(REMOTE_URL);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
             this.data = await response.json();
             this.renderAll();
-            console.log('✅ Content loaded successfully from data.json');
-        } catch (error) {
-            console.error('❌ Error loading content:', error);
+            console.log('✅ Content loaded successfully from GitHub');
+        } catch (remoteError) {
+            console.warn('⚠️ Failed to fetch from GitHub, trying local fallback...', remoteError.message);
+            
+            try {
+                // Fallback to local data.json
+                const localResponse = await fetch(LOCAL_FALLBACK);
+                
+                if (!localResponse.ok) {
+                    throw new Error(`HTTP error! status: ${localResponse.status}`);
+                }
+                
+                this.data = await localResponse.json();
+                this.renderAll();
+                console.log('✅ Content loaded successfully from local data.json (fallback)');
+            } catch (localError) {
+                console.error('❌ Error loading content from both sources:', localError);
+            }
         }
     }
 
