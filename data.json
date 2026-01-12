@@ -1,0 +1,600 @@
+{
+  "profile": {
+    "name": "Iqbal Baihaqi Abdulah",
+    "nickname": "Balee",
+    "loaderText": "IQBAL",
+    "title": "Software Engineer",
+    "company": "OLX Indonesia",
+    "heroDescription": "Software Engineer with passion for creating modern web experiences.",
+    "email": "baihaqiiqbal323@gmail.com",
+    "location": "Jakarta, Indonesia",
+    "photo": "assets/img/photo_profile.png",
+    "tagline": "Crafting digital experiences with clean code",
+    "available_for_hire": true,
+    "bio": "Frontend Developer with 5+ years of experience building scalable, high-traffic web applications. Specialized in Next.js, React, and TypeScript with proven experience improving performance, maintainability, and user experience in production systems used by thousands of users.",
+    "resume": "assets/resume/CV Jan 26.pdf"
+  },
+  
+  "stats": [
+    { "value": 5, "label": "Years Experience" },
+    { "value": 7, "label": "Companies Worked" },
+    { "value": 45, "label": "Skills Mastered" }
+  ],
+  
+  "social": {
+    "github": "https://github.com/iqballbayhaqi",
+    "linkedin": "https://www.linkedin.com/in/iqballbayhaqi/",
+    "instagram": "https://instagram.com/iqballbayhaqi",
+    "discord": "https://discord.com/users/680899020939591767"
+  },
+  
+  "skills": [
+    {
+      "id": "frontend",
+      "title": "Frontend Development",
+      "icon": "devicon-react-original",
+      "technologies": [
+        { "name": "React.js", "icon": "devicon-react-original", "color": "#61DAFB" },
+        { "name": "Next.js", "icon": "devicon-nextjs-plain", "color": "#ffffff" },
+        { "name": "Vue.js", "icon": "devicon-vuejs-plain", "color": "#4FC08D" },
+        { "name": "TypeScript", "icon": "devicon-typescript-plain", "color": "#3178C6" },
+        { "name": "HTML5", "icon": "devicon-html5-plain", "color": "#E34F26" },
+        { "name": "CSS3", "icon": "devicon-css3-plain", "color": "#1572B6" },
+        { "name": "Tailwind", "icon": "devicon-tailwindcss-original", "color": "#06B6D4" },
+        { "name": "SASS", "icon": "devicon-sass-original", "color": "#CC6699" }
+      ]
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript Ecosystem",
+      "icon": "devicon-javascript-plain",
+      "technologies": [
+        { "name": "JavaScript", "icon": "devicon-javascript-plain", "color": "#F7DF1E" },
+        { "name": "Node.js", "icon": "devicon-nodejs-plain", "color": "#339933" },
+        { "name": "Express.js", "icon": "devicon-express-original", "color": "#ffffff" },
+        { "name": "NPM", "icon": "devicon-npm-original-wordmark", "color": "#CB3837" }
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend & Database",
+      "icon": "devicon-laravel-original",
+      "technologies": [
+        { "name": "Laravel", "icon": "devicon-laravel-original", "color": "#FF2D20" },
+        { "name": "MySQL", "icon": "devicon-mysql-plain", "color": "#4479A1" },
+        { "name": "Java", "icon": "devicon-java-plain", "color": "#007396" },
+        { "name": "PostgreSQL", "icon": "devicon-postgresql-plain", "color": "#4169E1" }
+      ]
+    },
+    {
+      "id": "game",
+      "title": "Game Development",
+      "icon": "devicon-unity-plain",
+      "technologies": [
+        { "name": "Unity", "icon": "devicon-unity-plain", "color": "#ffffff" },
+        { "name": "Godot", "icon": "devicon-godot-plain", "color": "#478CBF" },
+        { "name": "C#", "icon": "devicon-csharp-plain", "color": "#512BD4" },
+        { "name": "Roblox Studio", "icon": "devicon-lua-plain", "color": "#00A2FF" },
+        { "name": "Construct", "icon": "devicon-construct3-plain", "color": "#00FFDA" },
+        { "name": "Blender", "icon": "devicon-blender-original", "color": "#F5792A" }
+      ]
+    },
+    {
+      "id": "web3",
+      "title": "Web3 & Blockchain",
+      "icon": "devicon-solidity-plain",
+      "technologies": [
+        { "name": "Solidity", "icon": "devicon-solidity-plain", "color": "#363636" },
+        { "name": "Ethereum", "icon": "devicon-ethereum-plain", "color": "#3C3C3D" },
+        { "name": "Web3.js", "icon": "devicon-javascript-plain", "color": "#F7DF1E" },
+        { "name": "Hardhat", "icon": "devicon-nodejs-plain", "color": "#FFF100" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools & Others",
+      "icon": "devicon-git-plain",
+      "technologies": [
+        { "name": "Git", "icon": "devicon-git-plain", "color": "#F05032" },
+        { "name": "Docker", "icon": "devicon-docker-plain", "color": "#2496ED" },
+        { "name": "AWS", "icon": "devicon-amazonwebservices-plain-wordmark", "color": "#FF9900" },
+        { "name": "Google Cloud", "icon": "devicon-googlecloud-plain", "color": "#4285F4" },
+        { "name": "VS Code", "icon": "devicon-vscode-plain", "color": "#007ACC" },
+        { "name": "Cursor", "icon": "devicon-vscode-plain", "color": "#00D1FF" },
+        { "name": "Figma", "icon": "devicon-figma-plain", "color": "#F24E1E" },
+        { "name": "Postman", "icon": "devicon-postman-plain", "color": "#FF6C37" }
+      ]
+    }
+  ],
+  
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "OLX Indonesia",
+      "subtitle": "Online Marketplace",
+      "description": "Platform jual-beli terbesar di Indonesia. Mengembangkan fitur-fitur mobile web untuk meningkatkan user experience dan performa aplikasi.",
+      "image": "assets/portfolio/olx.png",
+      "category": ["web", "mobile"],
+      "type": "Professional",
+      "year": "2024",
+      "color": "accent",
+      "logo": "OLX",
+      "logoType": "text",
+      "technologies": ["React.js", "Next.js", "TypeScript"],
+      "featured": true,
+      "links": {
+        "demo": "https://www.olx.co.id",
+        "github": null
+      }
+    },
+    {
+      "id": 2,
+      "title": "Mobbi",
+      "subtitle": "Automotive Platform",
+      "description": "Platform jual beli mobil bekas untuk PT Serasi Autoraya. Mengembangkan frontend dengan React, Next.js, dan Ant Design.",
+      "image": "assets/portfolio/mobbi.png",
+      "category": ["web"],
+      "type": "Corporate",
+      "year": "2023",
+      "color": "blue-500",
+      "logo": "MOBBI",
+      "logoType": "text",
+      "technologies": ["React.js", "Next.js", "Ant Design"],
+      "featured": true,
+      "links": {
+        "demo": "https://www.mobbi.id/",
+        "github": null
+      }
+    },
+    {
+      "id": 3,
+      "title": "HaiDafam Hotels",
+      "subtitle": "Hotel Booking Platform",
+      "description": "Mobile web platform untuk booking hotel PT Dafam Hotel Management dengan Next.js dan Styled Components.",
+      "image": "assets/portfolio/haidafam.png",
+      "category": ["web", "mobile"],
+      "type": "Corporate",
+      "year": "2022",
+      "color": "orange-500",
+      "logo": "DAFAM",
+      "logoType": "text",
+      "technologies": ["React.js", "Next.js", "Styled Components"],
+      "featured": true,
+      "links": {
+        "demo": "https://m.haidafam.com/",
+        "github": null
+      }
+    },
+    {
+      "id": 4,
+      "title": "Idejualan",
+      "subtitle": "E-Commerce Platform",
+      "description": "Platform dropship dan reseller untuk PT. IDE JUALAN CREATIVE dengan React dan Material UI.",
+      "image": "assets/portfolio/idejualan.png",
+      "category": ["web"],
+      "type": "Corporate",
+      "year": "2021",
+      "color": "purple-500",
+      "logo": "IDJ",
+      "logoType": "text",
+      "technologies": ["React.js", "Material UI", "Vercel"],
+      "featured": true,
+      "links": {
+        "demo": "https://app.idejualan.com/",
+        "github": null
+      }
+    },
+    {
+      "id": 5,
+      "title": "Indonesia Design",
+      "subtitle": "Design Magazine",
+      "description": "Website majalah desain Indonesia dengan React dan Styled Components.",
+      "image": "assets/portfolio/indonesiadesign.png",
+      "category": ["web"],
+      "type": "Corporate",
+      "year": "2021",
+      "color": "cyan-500",
+      "logo": "ID",
+      "logoType": "text",
+      "technologies": ["React.js", "Styled Components"],
+      "featured": false,
+      "links": {
+        "demo": "http://indonesiadesign.com/",
+        "github": null
+      }
+    },
+    {
+      "id": 6,
+      "title": "meGames",
+      "subtitle": "Mobile Game Platform",
+      "description": "Platform game mobile untuk PT Aku Cinta Memiles. Dikembangkan dengan Unity untuk Android.",
+      "image": "assets/portfolio/megame.png",
+      "category": ["game", "mobile"],
+      "type": "Corporate",
+      "year": "2021",
+      "color": "pink-500",
+      "logo": "unity",
+      "logoType": "devicon",
+      "technologies": ["Unity", "C#", "Android"],
+      "featured": false,
+      "links": {
+        "demo": "https://megame.gatradigital.com/",
+        "github": null
+      }
+    },
+    {
+      "id": 7,
+      "title": "MovieKita",
+      "subtitle": "Movie Database",
+      "description": "Web app untuk mencari dan melihat informasi film dengan React dan Styled Components.",
+      "image": "assets/portfolio/moviekita.png",
+      "category": ["web"],
+      "type": "Personal",
+      "year": "2020",
+      "color": "red-500",
+      "logo": "MK",
+      "logoType": "text",
+      "technologies": ["React.js", "Styled Components", "Vercel"],
+      "featured": false,
+      "links": {
+        "demo": "https://movie-kita.vercel.app/",
+        "github": null
+      }
+    },
+    {
+      "id": 8,
+      "title": "Maca Qur'an",
+      "subtitle": "Quran Web App",
+      "description": "Aplikasi web untuk membaca Al-Quran dengan Material UI dan React.",
+      "image": "assets/portfolio/macaquran.png",
+      "category": ["web"],
+      "type": "Personal",
+      "year": "2022",
+      "color": "emerald-500",
+      "logo": "MQ",
+      "logoType": "text",
+      "technologies": ["React.js", "Material UI", "Vercel"],
+      "featured": false,
+      "links": {
+        "demo": "https://maca-quran.vercel.app/",
+        "github": null
+      }
+    },
+    {
+      "id": 9,
+      "title": "Sudoku Master",
+      "subtitle": "Mobile Game",
+      "description": "A classic Sudoku puzzle game built with React Native and Expo. Features multiple difficulty levels, auto-fill hints, and validation system.",
+      "image": "assets/portfolio/sudoku-master.png",
+      "category": ["mobile", "game"],
+      "type": "Personal",
+      "year": "2020",
+      "color": "yellow-500",
+      "logo": "phone",
+      "logoType": "icon",
+      "technologies": ["React Native", "Expo"],
+      "featured": false,
+      "links": {
+        "demo": "https://expo.io/artifacts/547e9ebb-2e0f-4092-ba89-1dc470799da6",
+        "github": null
+      }
+    },
+    {
+      "id": 10,
+      "title": "JobScrapper",
+      "subtitle": "Job Aggregator",
+      "description": "Full stack web scrapper untuk mengumpulkan lowongan kerja dengan React, Node.js, GraphQL dan MongoDB.",
+      "image": null,
+      "category": ["web"],
+      "type": "Personal",
+      "year": "2020",
+      "color": "indigo-500",
+      "logo": "JS",
+      "logoType": "text",
+      "technologies": ["React.js", "Node.js", "GraphQL", "MongoDB"],
+      "featured": false,
+      "links": {
+        "demo": "https://jobscrapper.vercel.app/",
+        "github": null
+      }
+    },
+    {
+      "id": 11,
+      "title": "Tanjiro Kanban",
+      "subtitle": "Task Management",
+      "description": "Aplikasi kanban board dengan Vue.js, Node.js dan MongoDB untuk manajemen tugas.",
+      "image": "assets/portfolio/tanjiro-kanban.webp",
+      "category": ["web"],
+      "type": "Personal",
+      "year": "2020",
+      "color": "teal-500",
+      "logo": "TK",
+      "logoType": "text",
+      "technologies": ["Vue.js", "Node.js", "MongoDB"],
+      "featured": false,
+      "links": {
+        "demo": "https://tanjiro-kanban.web.app/",
+        "github": null
+      }
+    },
+    {
+      "id": 12,
+      "title": "Animekudesu",
+      "subtitle": "Anime Streaming",
+      "description": "Full stack web app untuk streaming anime dengan React, Redux, Node.js dan Firebase.",
+      "image": "assets/portfolio/animekudesu.png",
+      "category": ["web"],
+      "type": "Personal",
+      "year": "2020",
+      "color": "rose-500",
+      "logo": "AK",
+      "logoType": "text",
+      "technologies": ["React.js", "Redux", "Node.js", "Firebase"],
+      "featured": false,
+      "links": {
+        "demo": "https://animekudesu.gatradigital.com/",
+        "github": null
+      }
+    },
+    {
+      "id": 13,
+      "title": "Rekat Anugerah Lestari",
+      "subtitle": "Company Website",
+      "description": "Website company profile untuk PT Rekat Anugerah Lestari, authorized distributor of MAPEI untuk tile adhesives dan construction materials.",
+      "image": "assets/portfolio/rekatanugerahlestari.png",
+      "category": ["web"],
+      "type": "Freelance",
+      "year": "2024",
+      "color": "indigo-500",
+      "logo": "wordpress",
+      "logoType": "devicon",
+      "technologies": ["WordPress", "JavaScript", "CSS"],
+      "featured": false,
+      "links": {
+        "demo": "https://rekatanugerahlestari.com/",
+        "github": null
+      }
+    }
+  ],
+  
+  "experience": [
+    {
+      "id": 1,
+      "position": "Frontend Developer",
+      "company": "OLX Indonesia",
+      "companyShort": "OLX",
+      "logo": "assets/img/olx-logo.jpg",
+      "location": "Jakarta Selatan, Indonesia",
+      "vendor": "Esha Parama Technology",
+      "type": "Contract",
+      "period": "Jan 2024 - Present",
+      "description": "Mengembangkan produk mobile web dan web application dengan teknologi modern untuk meningkatkan user experience platform jual-beli terbesar di Indonesia.",
+      "technologies": ["React.js", "Next.js", "TypeScript", "SCSS", "Google Ads"],
+      "color": "blue-500",
+      "isCurrent": true
+    },
+    {
+      "id": 8,
+      "position": "Founder & CTO",
+      "company": "XIRE STUDIOS",
+      "companyShort": "XIRE",
+      "logo": "assets/img/xirestudios-logo.jpg",
+      "location": "Jakarta, Indonesia (Remote)",
+      "type": "Self-employed",
+      "period": "Feb 2021 - Present",
+      "description": "Developing Games For Businesses and Creating in-house games for gamers. Membangun game studio independen yang fokus pada pengembangan game untuk bisnis dan game in-house.",
+      "technologies": ["Unity", "C#", "Roblox Studio", "Godot", "Game Design"],
+      "color": "gray-400",
+      "isCurrent": true
+    },
+    {
+      "id": 2,
+      "position": "Frontend Web Developer",
+      "company": "PT. Serasi Autoraya",
+      "companyShort": "SERA",
+      "logo": "assets/img/sera-logo.png",
+      "logoFit": "contain",
+      "location": "Jakarta Utara, Indonesia",
+      "vendor": "Esha Parama Technology",
+      "type": "Contract",
+      "period": "May 2023 - Dec 2023",
+      "description": "Mengembangkan aplikasi Mobbi menggunakan React.js dan Next.js. Berkontribusi dalam membangun frontend modern dengan best practices dan responsive design.",
+      "technologies": ["React.js", "Next.js", "Ant Design", "jQuery", "SAP Hybris"],
+      "color": "orange-500",
+      "isCurrent": false
+    },
+    {
+      "id": 3,
+      "position": "Frontend Developer",
+      "company": "Dragatron",
+      "companyShort": "D",
+      "logo": "assets/img/dragatron-logo.jpg",
+      "location": "Sydney, Australia (Remote)",
+      "vendor": "Walden Global Service",
+      "type": "Contract",
+      "period": "Apr 2022 - Aug 2022",
+      "description": "Mengembangkan aplikasi web dengan React.js dan Redwood.JS. Belajar dan menerapkan best practices dalam pengembangan frontend modern.",
+      "technologies": ["React.js", "Redwood.JS"],
+      "color": "purple-500",
+      "isCurrent": false
+    },
+    {
+      "id": 4,
+      "position": "Back End Developer",
+      "company": "PT ACM",
+      "companyShort": "ACM",
+      "location": "Jakarta Utara, Indonesia",
+      "type": "Full-time",
+      "period": "Jan 2022 - May 2022",
+      "description": "Mengembangkan backend services dan API untuk platform MeMiles. Membangun sistem yang scalable dengan Laravel dan Express.js.",
+      "technologies": ["MySQL", "Laravel", "Express.js", "MongoDB"],
+      "color": "green-500",
+      "isCurrent": false
+    },
+    {
+      "id": 5,
+      "position": "Game Developer",
+      "company": "PT ACM",
+      "companyShort": "ACM",
+      "location": "Jakarta Utara, Indonesia",
+      "type": "Full-time",
+      "period": "Apr 2021 - Jan 2022",
+      "description": "Memulai karir sebagai Game Developer menggunakan Unity dan C#. Membuat berbagai game 2D untuk platform MeMiles.",
+      "technologies": ["Unity", "C#"],
+      "color": "pink-500",
+      "isCurrent": false
+    },
+    {
+      "id": 6,
+      "position": "Frontend Developer",
+      "company": "KodingWorks",
+      "companyShort": "KW",
+      "logo": "assets/img/kodingworks-logo.png",
+      "location": "Semarang, Indonesia (Remote)",
+      "type": "Freelance",
+      "period": "Apr 2020 - May 2021",
+      "description": "Mengembangkan berbagai aplikasi web sebagai freelancer. Membangun frontend modern dengan React.js, Next.js dan GraphQL.",
+      "technologies": ["React.js", "Node.js", "JavaScript", "Next.js", "GraphQL"],
+      "color": "slate-500",
+      "isCurrent": false
+    },
+    {
+      "id": 7,
+      "position": "Frontend Web Developer",
+      "company": "IDEJUALAN",
+      "companyShort": "IDJ",
+      "location": "Yogyakarta, Indonesia",
+      "type": "Contract",
+      "period": "Jun 2020 - Nov 2020",
+      "description": "Mengembangkan platform e-commerce dropship dan reseller dengan React.js dan Node.js.",
+      "technologies": ["React.js", "Node.js", "JavaScript"],
+      "color": "yellow-500",
+      "logo": "assets/img/idejualan-logo.jpg",
+      "isCurrent": false
+    }
+  ],
+  
+  "navigation": [
+    { "id": "about", "label": "ABOUT", "href": "#about" },
+    { "id": "portfolio", "label": "PORTFOLIO", "href": "#portfolio" },
+    { "id": "skills", "label": "SKILLS", "href": "#skills" },
+    { "id": "projects", "label": "EXPERIENCE", "href": "#projects" },
+    { "id": "education", "label": "EDUCATION", "href": "#education" },
+    { "id": "contact", "label": "CONTACT", "href": "#contact" }
+  ],
+  
+  "mobileNavigation": [
+    { "id": "about", "label": "ABOUT", "href": "#about" },
+    { "id": "portfolio", "label": "PORTFOLIO", "href": "#portfolio" },
+    { "id": "skills", "label": "SKILLS", "href": "#skills" },
+    { "id": "projects", "label": "EXPERIENCE", "href": "#projects" },
+    { "id": "education", "label": "EDUCATION", "href": "#education" },
+    { "id": "contact", "label": "CONTACT", "href": "#contact" }
+  ],
+  
+  "portfolioFilters": [
+    { "id": "all", "label": "All Projects", "icon": null },
+    { "id": "web", "label": "Web", "icon": "globe" },
+    { "id": "mobile", "label": "Mobile App", "icon": "phone" },
+    { "id": "game", "label": "Game", "icon": "play" }
+  ],
+  
+  "seo": {
+    "title": "Iqbal Baihaqi Abdullah | Software Engineer & Frontend Developer Indonesia",
+    "titleTemplate": "%s | Iqbal Baihaqi Abdullah",
+    "description": "Portfolio Iqbal Baihaqi Abdullah - Software Engineer di OLX Indonesia dengan 5+ tahun pengalaman. Spesialisasi React.js, Next.js, TypeScript, Vue.js. Tersedia untuk freelance & project. Jasa pembuatan website profesional.",
+    "keywords": [
+      "Frontend Developer Indonesia",
+      "Software Engineer Jakarta",
+      "React Developer Indonesia",
+      "Next.js Developer",
+      "Vue.js Developer",
+      "Web Developer Indonesia",
+      "Iqbal Baihaqi Abdullah",
+      "Freelance Developer Indonesia",
+      "Jasa Pembuatan Website",
+      "OLX Indonesia Developer",
+      "TypeScript Developer",
+      "Full Stack Developer",
+      "JavaScript Developer",
+      "Game Developer Indonesia",
+      "Unity Developer",
+      "React Native Developer",
+      "Mobile App Developer",
+      "Frontend Engineer",
+      "Web Development Services",
+      "Hire Frontend Developer"
+    ],
+    "author": "Iqbal Baihaqi Abdullah",
+    "siteUrl": "https://iqbalbayhaqi.com",
+    "ogImage": "https://iqbalbayhaqi.com/assets/img/og-image.png",
+    "twitterHandle": "@iqballbayhaqi",
+    "locale": "id_ID",
+    "type": "website"
+  },
+  
+  "hirePlatforms": [
+    {
+      "name": "Upwork",
+      "url": "https://www.upwork.com/freelancers/~012cc545ec376b4109",
+      "icon": "upwork",
+      "color": "#14A800",
+      "description": "Top Rated Freelancer",
+      "active": true
+    },
+    {
+      "name": "Freelancer",
+      "url": "https://www.freelancer.co.id/u/Iqballbayhaqi1",
+      "icon": "freelancer",
+      "color": "#29B2FE",
+      "description": "Verified Developer",
+      "active": true
+    },
+    {
+      "name": "Fastwork",
+      "url": "https://fastwork.id/user/iqbalabd",
+      "icon": "fastwork",
+      "color": "#0056D5",
+      "description": "Expert Seller",
+      "active": true
+    },
+    {
+      "name": "Sribulancer",
+      "url": "https://www.sribulancer.com/id/users/iqballbayhaqi",
+      "icon": "sribulancer",
+      "color": "#00BFA5",
+      "description": "Professional Freelancer",
+      "active": false
+    }
+  ],
+
+  "education": [
+    {
+      "id": 1,
+      "type": "bootcamp",
+      "institution": "Hacktiv8",
+      "program": "Full Stack JavaScript Immersive",
+      "logo": "https://images.glints.com/unsafe/glints-dashboard.oss-ap-southeast-1.aliyuncs.com/company-logo/61e556967f6e6c34b5b704c2e6f2043d.jpg",
+      "logoText": "H8",
+      "period": "Nov 2020 - Mar 2021",
+      "location": "Jakarta, Indonesia",
+      "description": "Intensive coding bootcamp selama 12 minggu yang mencakup fundamental programming, frontend development dengan React.js, backend development dengan Node.js & Express, dan database management dengan PostgreSQL & MongoDB.",
+      "skills": ["JavaScript", "React.js", "React Native", "Node.js", "Express.js", "PostgreSQL", "MongoDB", "REST API", "Git"],
+      "certificate": "assets/certificate/1617111802882.pdf",
+      "color": "yellow-500",
+      "featured": true,
+      "highlights": [
+        "Belajar intensive selama 12 minggu dengan jam belajar 8+ jam/hari",
+        "Membangun 4+ projects full-stack dari scratch",
+        "Pair programming dan code review dengan sesama students",
+        "Mentoring langsung dari professional developers"
+      ]
+    }
+  ],
+
+  "footer": {
+    "copyright": "Iqbal Baihaqi Abdullah",
+    "year": 2024,
+    "tagline": "Built with passion & clean code"
+  }
+}
