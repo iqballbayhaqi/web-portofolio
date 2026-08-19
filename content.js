@@ -13,37 +13,36 @@ class ContentLoader {
     async init() {
         const REMOTE_URL = 'https://raw.githubusercontent.com/iqballbayhaqi/web-portofolio/main/data.json';
         const LOCAL_FALLBACK = 'data.json';
-        
-        try {
-            // Try fetching from remote GitHub first
-            console.log('🔄 Fetching content from GitHub...');
-            const response = await fetch(REMOTE_URL);
-            
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            
-            this.data = await response.json();
-            this.renderAll();
-            console.log('✅ Content loaded successfully from GitHub');
-        } catch (remoteError) {
-            console.warn('⚠️ Failed to fetch from GitHub, trying local fallback...', remoteError.message);
-            
+
+        // On localhost the working copy wins, so edits to data.json (or an export from
+        // the dashboard) show up on refresh instead of being masked by the published
+        // file on GitHub. Everywhere else GitHub stays the source of truth.
+        const isLocal = ['localhost', '127.0.0.1', '::1', ''].includes(location.hostname);
+        const sources = isLocal
+            ? [['local data.json', LOCAL_FALLBACK], ['GitHub', REMOTE_URL]]
+            : [['GitHub', REMOTE_URL], ['local data.json', LOCAL_FALLBACK]];
+
+        for (const [label, url] of sources) {
             try {
-                // Fallback to local data.json
-                const localResponse = await fetch(LOCAL_FALLBACK);
-                
-                if (!localResponse.ok) {
-                    throw new Error(`HTTP error! status: ${localResponse.status}`);
+                console.log(`🔄 Fetching content from ${label}...`);
+                // no-store locally, otherwise the browser can keep serving a stale
+                // data.json and edits look like they did nothing.
+                const response = await fetch(url, isLocal ? { cache: 'no-store' } : undefined);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                
-                this.data = await localResponse.json();
+
+                this.data = await response.json();
                 this.renderAll();
-                console.log('✅ Content loaded successfully from local data.json (fallback)');
-            } catch (localError) {
-                console.error('❌ Error loading content from both sources:', localError);
+                console.log(`✅ Content loaded successfully from ${label}`);
+                return;
+            } catch (error) {
+                console.warn(`⚠️ Failed to load from ${label}:`, error.message);
             }
         }
+
+        console.error('❌ Error loading content: semua sumber gagal.');
     }
 
     // Calculate duration from period string (e.g., "Jan 2024 - Present" or "May 2023 - Dec 2023")
@@ -126,15 +125,51 @@ class ContentLoader {
                 
                 const filter = tab.getAttribute('data-filter');
                 
-                // Filter cards
+                // Filter cards.
+                // A card below the fold may never have run its scroll entrance tween, so it
+                // still carries GSAP's inline `opacity:0; transform:translateY(60px)`. Toggling
+                // classes alone cannot beat an inline style, which left revealed cards blank —
+                // so the visible state is driven explicitly here.
+                const hasGsap = typeof gsap !== 'undefined';
+                let shownIndex = 0;   // stagger counts only cards that stay visible
+
                 cards.forEach(card => {
                     const categories = card.getAttribute('data-category');
                     const shouldShow = filter === 'all' || (categories && categories.includes(filter));
-                    
+
                     if (shouldShow) {
                         card.classList.remove('hidden');
                         card.classList.add('show');
                         card.style.display = '';
+
+                        if (hasGsap) {
+                            gsap.to(card, {
+                                opacity: 1,
+                                scale: 1,
+                                y: 0,
+                                duration: 0.4,
+                                delay: shownIndex * 0.04,
+                                ease: 'power2.out',
+                                overwrite: 'auto'
+                            });
+                        } else {
+                            card.style.opacity = '';
+                            card.style.transform = '';
+                        }
+                        shownIndex++;
+                    } else if (hasGsap) {
+                        gsap.to(card, {
+                            opacity: 0,
+                            scale: 0.8,
+                            duration: 0.25,
+                            ease: 'power2.in',
+                            overwrite: 'auto',
+                            onComplete: () => {
+                                card.classList.remove('show');
+                                card.classList.add('hidden');
+                                card.style.display = 'none';
+                            }
+                        });
                     } else {
                         card.classList.remove('show');
                         card.classList.add('hidden');
@@ -165,6 +200,14 @@ class ContentLoader {
         this.setText('.hero-tagline', profile.tagline);
         this.setText('.hero-description-text', profile.heroDescription);
         this.setText('.hero-company', profile.company);
+
+        // No employer set means "not working anywhere right now", so the whole
+        // "Currently building products at X." clause is hidden rather than left
+        // dangling as "Currently building products at .".
+        const companyLine = document.querySelector('.hero-company-line');
+        if (companyLine) {
+            companyLine.style.display = (profile.company || '').trim() ? '' : 'none';
+        }
         
         // About Section
         this.setText('.about-bio', profile.bio);

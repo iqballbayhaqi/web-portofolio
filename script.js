@@ -133,25 +133,30 @@ const initScrollAnimations = () => {
     });
     
     // Portfolio Cards
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
-    portfolioCards.forEach((card, index) => {
-        gsap.fromTo(card, 
-            { y: 60, opacity: 0, scale: 0.95 },
-            {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 90%',
-                    toggleActions: 'play none none none'
-                },
+    // Batched on purpose: a per-card `delay: index * 0.15` staggered off the GLOBAL
+    // index, so card #13 sat invisible for 1.8s after scrolling into view. With batch,
+    // the stagger restarts for each group that enters together.
+    const portfolioCards = gsap.utils.toArray('.portfolio-card');
+    if (portfolioCards.length) {
+        gsap.set(portfolioCards, { y: 60, opacity: 0, scale: 0.95 });
+
+        ScrollTrigger.batch(portfolioCards, {
+            start: 'top 90%',
+            once: true,
+            onEnter: batch => gsap.to(batch, {
                 y: 0,
                 opacity: 1,
                 scale: 1,
                 duration: 0.8,
-                delay: index * 0.15,
-                ease: 'power4.out'
-            }
-        );
-    });
+                // `amount` spreads the whole stagger across the batch instead of adding
+                // a fixed gap per card, so jumping straight to the section (anchor link)
+                // can never queue a card behind a second of accumulated delay.
+                stagger: { amount: 0.3 },
+                ease: 'power4.out',
+                overwrite: 'auto'
+            })
+        });
+    }
     
     // Skill Cards
     const skillCards = document.querySelectorAll('.skill-card');
@@ -239,59 +244,11 @@ const initScrollAnimations = () => {
 
 /* ========================================
    PORTFOLIO FILTER
+   ----------------------------------------
+   Lives in content.js, which owns the filter because the cards only exist
+   after data.json is rendered. The copy that used to sit here ran at
+   DOMContentLoaded, always found zero cards, and returned early.
    ======================================== */
-const initPortfolioFilter = () => {
-    const tabs = document.querySelectorAll('.portfolio-tab');
-    const cards = document.querySelectorAll('.portfolio-card');
-    
-    if (!tabs.length || !cards.length) return;
-    
-    // Initialize all cards as visible
-    cards.forEach(card => card.classList.add('show'));
-    
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Update active tab
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            const filter = tab.getAttribute('data-filter');
-            
-            // Filter cards with animation
-            cards.forEach((card, index) => {
-                const categories = card.getAttribute('data-category');
-                const shouldShow = filter === 'all' || (categories && categories.includes(filter));
-                
-                if (shouldShow) {
-                    // Show card with animation
-                    gsap.to(card, {
-                        opacity: 1,
-                        scale: 1,
-                        duration: 0.4,
-                        delay: index * 0.05,
-                        ease: 'power2.out',
-                        onStart: () => {
-                            card.classList.remove('hidden');
-                            card.classList.add('show');
-                        }
-                    });
-                } else {
-                    // Hide card with animation
-                    gsap.to(card, {
-                        opacity: 0,
-                        scale: 0.8,
-                        duration: 0.3,
-                        ease: 'power2.in',
-                        onComplete: () => {
-                            card.classList.remove('show');
-                            card.classList.add('hidden');
-                        }
-                    });
-                }
-            });
-        });
-    });
-};
 
 /* ========================================
    CURSOR FOLLOWER
@@ -578,7 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMagneticButtons();
     initFormInteractions();
     initScrollProgress();
-    initPortfolioFilter();
+    // Portfolio filter is wired up by content.js once the cards are rendered.
 });
 
 // Add ScrollTo plugin for smooth navigation
