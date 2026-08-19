@@ -4,7 +4,7 @@
     "nickname": "Balee",
     "loaderText": "IQBAL",
     "title": "Software Engineer",
-    "company": "OLX Indonesia",
+    "company": "",
     "heroDescription": "Software Engineer with passion for creating modern web experiences.",
     "email": "baihaqiiqbal323@gmail.com",
     "location": "Jakarta, Indonesia",
@@ -218,7 +218,7 @@
       "technologies": ["Unity", "C#", "Android"],
       "featured": false,
       "links": {
-        "demo": "https://megame.gatradigital.com/",
+        "demo": "https://megames.balee.web.id/",
         "github": null
       }
     },
@@ -332,7 +332,7 @@
       "technologies": ["React.js", "Redux", "Node.js", "Firebase"],
       "featured": false,
       "links": {
-        "demo": "https://animekudesu.gatradigital.com/",
+        "demo": "https://animekudesu.web.id/",
         "github": null
       }
     },
@@ -354,6 +354,25 @@
         "demo": "https://rekatanugerahlestari.com/",
         "github": null
       }
+    },
+    {
+      "id": 14,
+      "title": "nontonSkuy",
+      "subtitle": "Movie Streaming",
+      "description": "Platform streaming film dan serial dengan katalog per genre dan negara, pemutar trailer, rating, serta watchlist dan riwayat tontonan.",
+      "image": "assets/portfolio/nontonskuy.png",
+      "category": ["web"],
+      "type": "Personal",
+      "year": "2026",
+      "color": "blue-500",
+      "logo": "NS",
+      "logoType": "text",
+      "technologies": ["Next.js", "React.js", "Tailwind CSS"],
+      "featured": false,
+      "links": {
+        "demo": "https://movie.balee.web.id/",
+        "github": null
+      }
     }
   ],
   
@@ -367,11 +386,11 @@
       "location": "Jakarta Selatan, Indonesia",
       "vendor": "Esha Parama Technology",
       "type": "Contract",
-      "period": "Jan 2024 - Present",
+      "period": "Jan 2024 - Aug 2026",
       "description": "Mengembangkan produk mobile web dan web application dengan teknologi modern untuk meningkatkan user experience platform jual-beli terbesar di Indonesia.",
       "technologies": ["React.js", "Next.js", "TypeScript", "SCSS", "Google Ads"],
       "color": "blue-500",
-      "isCurrent": true
+      "isCurrent": false
     },
     {
       "id": 8,
@@ -502,7 +521,7 @@
   "seo": {
     "title": "Iqbal Baihaqi Abdullah | Software Engineer & Frontend Developer Indonesia",
     "titleTemplate": "%s | Iqbal Baihaqi Abdullah",
-    "description": "Portfolio Iqbal Baihaqi Abdullah - Software Engineer di OLX Indonesia dengan 5+ tahun pengalaman. Spesialisasi React.js, Next.js, TypeScript, Vue.js. Tersedia untuk freelance & project. Jasa pembuatan website profesional.",
+    "description": "Portfolio Iqbal Baihaqi Abdullah - Software Engineer dengan 5+ tahun pengalaman. Spesialisasi React.js, Next.js, TypeScript, Vue.js. Tersedia untuk freelance & project. Jasa pembuatan website profesional.",
     "keywords": [
       "Frontend Developer Indonesia",
       "Software Engineer Jakarta",
@@ -513,7 +532,6 @@
       "Iqbal Baihaqi Abdullah",
       "Freelance Developer Indonesia",
       "Jasa Pembuatan Website",
-      "OLX Indonesia Developer",
       "TypeScript Developer",
       "Full Stack Developer",
       "JavaScript Developer",
