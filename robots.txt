@@ -28,6 +28,8 @@ Allow: /
 Disallow: /node_modules/
 Disallow: /*.json$
 Disallow: /terminals/
+Disallow: /admin.html
+Disallow: /admin.js
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
