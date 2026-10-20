@@ -195,7 +195,14 @@ class ContentLoader {
         const { profile } = this.data;
         
         // Hero Section
-        this.setText('.hero-title', profile.name);
+        const heading = document.querySelector('.hero-title');
+        if (heading) {
+            heading.textContent = profile.name;
+            const role = document.createElement('span');
+            role.className = 'sr-only';
+            role.textContent = ` - ${profile.title} di Jakarta`;
+            heading.appendChild(role);
+        }
         this.setText('.hero-subtitle', `${profile.title}`);
         this.setText('.hero-tagline', profile.tagline);
         this.setText('.hero-description-text', profile.heroDescription);
@@ -212,7 +219,7 @@ class ContentLoader {
         // About Section
         this.setText('.about-bio', profile.bio);
         this.setAttr('.about-photo', 'src', profile.photo);
-        this.setAttr('.about-photo', 'alt', profile.name);
+        this.setAttr('.about-photo', 'alt', `${profile.name}, ${profile.title} di Jakarta`);
         
         // Code decoration
         this.setText('.code-name', `name: "${profile.name}",`);
@@ -431,6 +438,8 @@ class ContentLoader {
             'Vercel': 'devicon-vercel-plain',
             'Git': 'devicon-git-plain',
             'Figma': 'devicon-figma-plain',
+            'Go (Programming Language)': 'devicon-go-original-wordmark',
+            'AngularJS': 'devicon-angularjs-plain',
             'Java': 'devicon-java-plain'
         };
         return techIcons[tech] || 'devicon-devicon-plain';
@@ -470,6 +479,8 @@ class ContentLoader {
             'Vercel': '#ffffff',
             'Git': '#F05032',
             'Figma': '#F24E1E',
+            'Go (Programming Language)': '#00ADD8',
+            'AngularJS': '#DD0031',
             'Java': '#007396'
         };
         return techColors[tech] || '#9ca3af';
@@ -764,9 +775,24 @@ class ContentLoader {
         const { seo } = this.data;
         
         document.title = seo.title;
+
+        // Keep link previews tied to the photo displayed in the main profile.
+        const photo = this.data.profile.photo;
+        const image = new URL(photo, 'https://balee.web.id/').href;
+        const imageAlt = `${this.data.profile.name} - ${this.data.profile.title} di Jakarta`;
+        for (const selector of ['meta[property="og:image"]', 'meta[name="twitter:image"]']) {
+            this.setAttr(selector, 'content', image);
+        }
+        for (const selector of ['meta[property="og:image:alt"]', 'meta[name="twitter:image:alt"]']) {
+            this.setAttr(selector, 'content', imageAlt);
+        }
         
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) metaDesc.setAttribute('content', seo.description);
+        for (const selector of ['meta[name="title"]', 'meta[property="og:title"]', 'meta[name="twitter:title"]']) {
+            this.setAttr(selector, 'content', seo.title);
+        }
+        for (const selector of ['meta[name="description"]', 'meta[property="og:description"]', 'meta[name="twitter:description"]']) {
+            this.setAttr(selector, 'content', seo.description);
+        }
     }
 
     // ========================================

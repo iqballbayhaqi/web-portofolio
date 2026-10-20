@@ -1,41 +1,9 @@
-# robots.txt for iqbalbayhaqi.com
-# Portfolio Website - Iqbal Baihaqi Abdullah
-
-# Allow all search engines
+# Public content and rendering resources must remain crawlable.
 User-agent: *
 Allow: /
+Disallow: /.git/
+Disallow: /tests/
+Disallow: /dev-server.py
 
-# Allow specific bots
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Disallow unnecessary paths
-Disallow: /node_modules/
-Disallow: /*.json$
-Disallow: /terminals/
-Disallow: /admin.html
-Disallow: /admin.js
-
-# Crawl-delay for polite crawling
-Crawl-delay: 1
-
-# Sitemap location
-Sitemap: https://iqbalbayhaqi.com/sitemap.xml
-
-# Host
-Host: https://iqbalbayhaqi.com
+# admin.html uses a noindex meta tag; allow crawling so bots can read it.
+Sitemap: https://balee.web.id/sitemap.xml

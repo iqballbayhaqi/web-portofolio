@@ -1,0 +1,19 @@
+# REVIEW EXAMPLE ONLY: merge into the existing HTTPS server block.
+# Do not replace TLS certificates, root, or existing application locations.
+# The block must already serve both names with valid certificates.
+# Run nginx -t before reloading after installation.
+
+# Consolidate www with the canonical hostname.
+if ($host = www.balee.web.id) {
+    return 301 https://balee.web.id$request_uri;
+}
+
+# Redirect external index.html requests, preserving query parameters.
+# $request_uri remains / for internal directory-index handling.
+if ($request_uri ~ "^/index\.html(?:\?|$)") {
+    return 301 https://balee.web.id/$is_args$args;
+}
+
+# Existing HTTP -> HTTPS redirects should target https://balee.web.id.
+# Existing static-site location / should use: try_files $uri $uri/ =404;
+# Keep /data.json and rendering assets accessible to search engines.

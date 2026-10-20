@@ -1,17 +1,17 @@
 {
   "profile": {
-    "name": "Iqbal Baihaqi Abdulah",
+    "name": "Iqbal Baihaqi Abdullah",
     "nickname": "Balee",
     "loaderText": "IQBAL",
     "title": "Software Engineer",
-    "company": "",
-    "heroDescription": "Software Engineer with passion for creating modern web experiences.",
+    "company": "XLSMART",
+    "heroDescription": "Saya Iqbal Baihaqi Abdullah, Software Engineer di Jakarta. Saya membangun aplikasi web dengan React, Next.js, TypeScript, Go, dan AngularJS.",
     "email": "baihaqiiqbal323@gmail.com",
     "location": "Jakarta, Indonesia",
     "photo": "assets/img/photo_profile.png",
     "tagline": "Crafting digital experiences with clean code",
     "available_for_hire": true,
-    "bio": "Frontend Developer with 5+ years of experience building scalable, high-traffic web applications. Specialized in Next.js, React, and TypeScript with proven experience improving performance, maintainability, and user experience in production systems used by thousands of users.",
+    "bio": "Iqbal Baihaqi Abdullah adalah Software Engineer di PT XLSMART Telecom Sejahtera Tbk, Jakarta, sejak September 2026. Sebelumnya, saya bekerja sebagai Frontend Developer di OLX Indonesia dan PT. Serasi Autoraya untuk proyek mobbi. Dengan pengalaman 5+ tahun, saya berfokus pada pengembangan aplikasi web menggunakan React, Next.js, TypeScript, Go, dan AngularJS.",
     "resume": "assets/resume/CV Jan 26.pdf"
   },
   
@@ -378,17 +378,40 @@
   
   "experience": [
     {
+      "id": 9,
+      "position": "Software Engineer",
+      "company": "PT XLSMART Telecom Sejahtera Tbk",
+      "companyShort": "XLSMART",
+      "logo": "assets/img/xlsmart-logo.png",
+      "logoFit": "contain",
+      "location": "Setia Budi, Jakarta, Indonesia ? On-site",
+      "type": "Contract",
+      "period": "Sep 2026 - Present",
+      "description": "Software Engineer di PT XLSMART Telecom Sejahtera Tbk.",
+      "technologies": [
+        "Go (Programming Language)",
+        "AngularJS"
+      ],
+      "color": "blue-500",
+      "isCurrent": true
+    },
+    {
       "id": 1,
       "position": "Frontend Developer",
       "company": "OLX Indonesia",
       "companyShort": "OLX",
       "logo": "assets/img/olx-logo.jpg",
-      "location": "Jakarta Selatan, Indonesia",
-      "vendor": "Esha Parama Technology",
-      "type": "Contract",
+      "location": "Jakarta, Indonesia ? Hybrid",
+      "type": "Full-time",
       "period": "Jan 2024 - Aug 2026",
-      "description": "Mengembangkan produk mobile web dan web application dengan teknologi modern untuk meningkatkan user experience platform jual-beli terbesar di Indonesia.",
-      "technologies": ["React.js", "Next.js", "TypeScript", "SCSS", "Google Ads"],
+      "description": "Working at project OLXmobbi, OLX Indonesia.",
+      "technologies": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "SCSS",
+        "Google Ads"
+      ],
       "color": "blue-500",
       "isCurrent": false
     },
@@ -402,23 +425,35 @@
       "type": "Self-employed",
       "period": "Feb 2021 - Present",
       "description": "Developing Games For Businesses and Creating in-house games for gamers. Membangun game studio independen yang fokus pada pengembangan game untuk bisnis dan game in-house.",
-      "technologies": ["Unity", "C#", "Roblox Studio", "Godot", "Game Design"],
+      "technologies": [
+        "Unity",
+        "C#",
+        "Roblox Studio",
+        "Godot",
+        "Game Design"
+      ],
       "color": "gray-400",
       "isCurrent": true
     },
     {
       "id": 2,
-      "position": "Frontend Web Developer",
+      "position": "Frontend Developer",
       "company": "PT. Serasi Autoraya",
       "companyShort": "SERA",
       "logo": "assets/img/sera-logo.png",
       "logoFit": "contain",
-      "location": "Jakarta Utara, Indonesia",
-      "vendor": "Esha Parama Technology",
+      "location": "Jakarta, Indonesia",
       "type": "Contract",
-      "period": "May 2023 - Dec 2023",
-      "description": "Mengembangkan aplikasi Mobbi menggunakan React.js dan Next.js. Berkontribusi dalam membangun frontend modern dengan best practices dan responsive design.",
-      "technologies": ["React.js", "Next.js", "Ant Design", "jQuery", "SAP Hybris"],
+      "period": "Aug 2022 - Dec 2023",
+      "description": "Project mobbi ? platform jual beli mobil bekas untuk membantu menemukan mobil idaman dan mendukung mobilitas.",
+      "technologies": [
+        "Java",
+        "React.js",
+        "Next.js",
+        "Ant Design",
+        "jQuery",
+        "SAP Hybris"
+      ],
       "color": "orange-500",
       "isCurrent": false
     },
@@ -433,7 +468,10 @@
       "type": "Contract",
       "period": "Apr 2022 - Aug 2022",
       "description": "Mengembangkan aplikasi web dengan React.js dan Redwood.JS. Belajar dan menerapkan best practices dalam pengembangan frontend modern.",
-      "technologies": ["React.js", "Redwood.JS"],
+      "technologies": [
+        "React.js",
+        "Redwood.JS"
+      ],
       "color": "purple-500",
       "isCurrent": false
     },
@@ -442,11 +480,18 @@
       "position": "Back End Developer",
       "company": "PT ACM",
       "companyShort": "ACM",
+      "logo": "assets/img/acm-logo.jpg",
+      "logoFit": "contain",
       "location": "Jakarta Utara, Indonesia",
       "type": "Full-time",
       "period": "Jan 2022 - May 2022",
       "description": "Mengembangkan backend services dan API untuk platform MeMiles. Membangun sistem yang scalable dengan Laravel dan Express.js.",
-      "technologies": ["MySQL", "Laravel", "Express.js", "MongoDB"],
+      "technologies": [
+        "MySQL",
+        "Laravel",
+        "Express.js",
+        "MongoDB"
+      ],
       "color": "green-500",
       "isCurrent": false
     },
@@ -455,11 +500,16 @@
       "position": "Game Developer",
       "company": "PT ACM",
       "companyShort": "ACM",
+      "logo": "assets/img/acm-logo.jpg",
+      "logoFit": "contain",
       "location": "Jakarta Utara, Indonesia",
       "type": "Full-time",
       "period": "Apr 2021 - Jan 2022",
       "description": "Memulai karir sebagai Game Developer menggunakan Unity dan C#. Membuat berbagai game 2D untuk platform MeMiles.",
-      "technologies": ["Unity", "C#"],
+      "technologies": [
+        "Unity",
+        "C#"
+      ],
       "color": "pink-500",
       "isCurrent": false
     },
@@ -473,7 +523,13 @@
       "type": "Freelance",
       "period": "Apr 2020 - May 2021",
       "description": "Mengembangkan berbagai aplikasi web sebagai freelancer. Membangun frontend modern dengan React.js, Next.js dan GraphQL.",
-      "technologies": ["React.js", "Node.js", "JavaScript", "Next.js", "GraphQL"],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "JavaScript",
+        "Next.js",
+        "GraphQL"
+      ],
       "color": "slate-500",
       "isCurrent": false
     },
@@ -486,7 +542,11 @@
       "type": "Contract",
       "period": "Jun 2020 - Nov 2020",
       "description": "Mengembangkan platform e-commerce dropship dan reseller dengan React.js dan Node.js.",
-      "technologies": ["React.js", "Node.js", "JavaScript"],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "JavaScript"
+      ],
       "color": "yellow-500",
       "logo": "assets/img/idejualan-logo.jpg",
       "isCurrent": false
@@ -519,37 +579,37 @@
   ],
   
   "seo": {
-    "title": "Iqbal Baihaqi Abdullah | Software Engineer & Frontend Developer Indonesia",
+    "title": "Iqbal Baihaqi Abdullah | Software Engineer Jakarta",
     "titleTemplate": "%s | Iqbal Baihaqi Abdullah",
-    "description": "Portfolio Iqbal Baihaqi Abdullah - Software Engineer dengan 5+ tahun pengalaman. Spesialisasi React.js, Next.js, TypeScript, Vue.js. Tersedia untuk freelance & project. Jasa pembuatan website profesional.",
+    "description": "Iqbal Baihaqi Abdullah, Software Engineer di Jakarta dengan 5+ tahun pengalaman. Kini di XLSMART, sebelumnya OLX Indonesia. React, Next.js, TypeScript dan Go.",
     "keywords": [
-      "Frontend Developer Indonesia",
-      "Software Engineer Jakarta",
-      "React Developer Indonesia",
-      "Next.js Developer",
-      "Vue.js Developer",
-      "Web Developer Indonesia",
-      "Iqbal Baihaqi Abdullah",
-      "Freelance Developer Indonesia",
-      "Jasa Pembuatan Website",
-      "TypeScript Developer",
-      "Full Stack Developer",
-      "JavaScript Developer",
-      "Game Developer Indonesia",
-      "Unity Developer",
-      "React Native Developer",
-      "Mobile App Developer",
-      "Frontend Engineer",
-      "Web Development Services",
-      "Hire Frontend Developer"
+        "Frontend Developer Indonesia",
+        "Software Engineer Jakarta",
+        "React Developer Indonesia",
+        "Next.js Developer",
+        "Vue.js Developer",
+        "Web Developer Indonesia",
+        "Iqbal Baihaqi Abdullah",
+        "Freelance Developer Indonesia",
+        "Jasa Pembuatan Website",
+        "TypeScript Developer",
+        "Full Stack Developer",
+        "JavaScript Developer",
+        "Game Developer Indonesia",
+        "Unity Developer",
+        "React Native Developer",
+        "Mobile App Developer",
+        "Frontend Engineer",
+        "Web Development Services",
+        "Hire Frontend Developer"
     ],
     "author": "Iqbal Baihaqi Abdullah",
-    "siteUrl": "https://iqbalbayhaqi.com",
-    "ogImage": "https://iqbalbayhaqi.com/assets/img/og-image.png",
+    "siteUrl": "https://balee.web.id",
+    "ogImage": "https://balee.web.id/assets/img/photo_profile.png",
     "twitterHandle": "@iqballbayhaqi",
     "locale": "id_ID",
     "type": "website"
-  },
+},
   
   "hirePlatforms": [
     {
