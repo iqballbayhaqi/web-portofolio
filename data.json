@@ -373,6 +373,25 @@
         "demo": "https://movie.balee.web.id/",
         "github": null
       }
+    },
+    {
+      "id": 15,
+      "title": "KomikHub",
+      "subtitle": "Comic Reader PWA",
+      "description": "Aplikasi baca manga, manhwa, dan manhua yang menggabungkan tiga sumber lewat API scraper Node.js buatan sendiri. Fitur: pencarian live dengan riwayat dan trending, filter Explore, simpan chapter untuk dibaca offline, mode baca kanan-ke-kiri dengan pinch zoom, sensor konten 18+, serta halaman SEO dan sitemap untuk mesin pencari.",
+      "image": "assets/portfolio/komikhub.png",
+      "category": ["web", "mobile"],
+      "type": "Personal",
+      "year": "2026",
+      "color": "amber-500",
+      "logo": "KH",
+      "logoType": "text",
+      "technologies": ["React.js", "Vite", "Node.js", "Express", "PWA"],
+      "featured": false,
+      "links": {
+        "demo": "https://komik.balee.web.id/",
+        "github": null
+      }
     }
   ],
   
