@@ -114,6 +114,11 @@ const SCHEMA = [
             { key: 'logoType', label: 'Jenis logo', type: 'text', suggest: true },
             { key: 'color', label: 'Warna aksen', type: 'text', suggest: true, hint: 'Token warna, mis. accent atau blue-500.' },
             { key: 'featured', label: 'Tampilkan sebagai unggulan', type: 'bool' },
+            { key: 'slug', label: 'Slug halaman detail', type: 'text', hint: 'Opsional. Kosongkan untuk memakai judul, mis. komikhub → project.html?p=komikhub' },
+            { key: 'role', label: 'Peran saya', type: 'text', hint: 'Opsional, tampil di halaman detail. Mis. Frontend Developer' },
+            { key: 'longDescription', label: 'Deskripsi lengkap', type: 'textarea', hint: 'Opsional, halaman detail. Pisahkan paragraf dengan baris kosong.' },
+            { key: 'features', label: 'Fitur / kontribusi', type: 'stringlist', hint: 'Opsional, tampil sebagai daftar di halaman detail.' },
+            { key: 'gallery', label: 'Galeri screenshot', type: 'stringlist', hint: 'Opsional. Satu path gambar per baris, mis. assets/portfolio/komikhub-2.png' },
             {
                 key: 'links', label: 'Tautan', type: 'object',
                 fields: [
